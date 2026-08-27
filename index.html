@@ -19,20 +19,26 @@ body{
 }
 
 .pizza{
-    font-size:100px;
+    font-size:130px;
     display:inline-block;
-    animation:cancan .6s infinite alternate;
+    animation:cancan .8s infinite ease-in-out;
 }
 `
 
 @keyframes cancan{
-    from{
-        transform:translateY(0) rotate(-15deg);
+
+    0%{
+        transform:translateY(0px) rotate(-20deg);
     }
 
-    to{
-        transform:translateY(-30px) rotate(15deg);
+    50%{
+        transform:translateY(-40px) rotate(0deg);
     }
+
+    100%{
+        transform:translateY(0px) rotate(20deg);
+    }
+
 }
 <div class="pizza-line">
     <span class="pizza">🍕🕺</span>
