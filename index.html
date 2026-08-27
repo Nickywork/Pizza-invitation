@@ -19,15 +19,32 @@ body{
 }
 
 .pizza{
-    font-size:150px;
-    animation:dance 1s infinite alternate;
+    font-size:100px;
+    display:inline-block;
+    animation:cancan .6s infinite alternate;
+}
+`
+
+@keyframes cancan{
+    from{
+        transform:translateY(0) rotate(-15deg);
+    }
+
+    to{
+        transform:translateY(-30px) rotate(15deg);
+    }
+}
+.pizza-line{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    margin-bottom:20px;
 }
 
-@keyframes dance{
-    from{transform:rotate(-15deg);}
-    to{transform:rotate(15deg) translateY(-15px);}
-}
-
+.delay1{animation-delay:.1s;}
+.delay2{animation-delay:.2s;}
+.delay3{animation-delay:.3s;}
+.delay4{animation-delay:.4s;}
 .card{
     background:rgba(255,255,255,.15);
     padding:30px;
@@ -54,7 +71,13 @@ body{
 
 <div class="container">
 
-<div class="pizza">🍕</div>
+<div class="pizza-line">
+    <span class="pizza">🍕</span>
+    <span class="pizza delay1">🍕</span>
+    <span class="pizza delay2">🍕</span>
+    <span class="pizza delay3">🍕</span>
+    <span class="pizza delay4">🍕</span>
+</div>
 
 <div class="card">
 
