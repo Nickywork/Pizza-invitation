@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+2
+<html>
+3
+<head>
+4
+<meta charset="utf-8">
+5
+<meta name="viewport" content="width=device-width,initial-scale=1">
+6
+<title>Classified Pizza Mission</title>
+7
+ 
+8
+<style>
+9
+body{
+10
+margin:0;
+11
+font-family:Segoe UI,Arial,sans-serif;
+12
+background:#0d1117;
+13
+color:white;
+14
+text-align:center;
+15
+overflow:hidden;
+16
+}
+17
+ 
+18
+#loading{
+19
+position:absolute;
+20
+inset:0;
+21
+background:#000;
+22
+display:flex;
+23
+flex-direction:column;
+24
+justify-content:center;
+25
+align-items:center;
+26
+font-size:30px;
+27
+z-index:10;
+28
+}
+29
+ 
+30
+#main{
+31
+display:none;
+32
+padding-top:40px;
+33
+}
+34
+ 
+35
+.pizza{
+36
+font-size:180px;
+37
+animation:dance 1s infinite alternate;
+38
+}
+39
+ 
+40
+@keyframes dance{
+41
+from{transform:rotate(-15deg);}
+42
+to{transform:rotate(15deg) translateY(-15px);}
+43
+}
+44
+ 
+45
+h1{
+46
+font-size:48px;
+47
+margin-bottom:10px;
+48
+}
+49
+ 
+50
+.card{
+51
+max-width:800px;
+52
+margin:auto;
+53
+background:rgba(255,255,255,.1);
+54
+padding:30px;
+55
+border-radius:25px;
+56
+backdrop-filter:blur(10px);
+57
+}
+58
+ 
+59
+.button{
+60
+display:inline-block;
+61
+padding:20px 40px;
+62
+margin-top:20px;
+63
+font-size:24px;
+64
+background:#ff9800;
+65
+color:white;
+66
+text-decoration:none;
+67
+border-radius:50px;
+68
+font-weight:bold;
+69
+}
+70
+ 
+71
+.button:hover{
+72
+background:#ffb300;
+73
+}
+74
+ 
+75
+#countdown{
+76
+font-size:28px;
+77
+margin:20px;
+78
+}
+79
+ 
+80
+.confetti{
+81
+position:fixed;
+82
+width:10px;
+83
+height:10px;
+84
+top:-10px;
+85
+animation:fall linear infinite;
+86
+}
+87
+ 
+88
+@keyframes fall{
+89
+to{
+90
+transform:translateY(120vh) rotate(720deg);
+91
+}
+92
+}
+93
+</style>
+94
+</head>
+95
+ 
+96
+<body>
+97
+ 
+98
+<div id="loading">
+99
+<div>🔐 ACCESSING PIZZA HEADQUARTERS...</div>
+100
+<br>
+101
+<div id="scan"></div>
+102
+</div>
+103
+ 
+104
+<div id="main">
+105
+ 
+106
+<div class="pizza">🍕</div>
+107
+ 
+108
+<h1>CLASSIFIED PIZZA MISSION</h1>
+109
+ 
+110
+<div class="card">
+111
+ 
+112
+<h2>Agent Successfully Verified</h2>
+113
+ 
+114
+<p>
+115
+The Pizza Council has reviewed your credentials.
+116
+</p>
+117
+ 
+118
+<p>
+119
+✅ Hunger Level: Critical<br>
+120
+✅ Pizza Clearance: Approved<br>
+121
+✅ Good Times: Authorized
+122
+</p>
+123
+ 
+124
+<p>
+125
+Failure to attend may result in severe FOMO.
+126
+</p>
+127
+ 
+128
+<div id="countdown"></div>
+129
+ 
+130
+<a class="button"
+131
+href="PASTE_YOUR_FORM_LINK_HERE"
+132
+target="_blank">
+133
+🍕 ACCEPT THE MISSION
+134
+</a>
+135
+ 
+136
+</✔ Love of Pizza Detected",
+137
+"✔ Hunger Level Critical",
+138
+"✔ Clearance Approved",
+139
+"✔ Agent Verified"
+140
+];
+141
+ 
+142
+let i=0;
+143
+ 
+144
+function nextMessage(){
+145
+if(i<messages.length){
+146
+document.getElementById("scan").innerHTML+=messages[i]+"<br>";
+147
+i++;
+148
+setTimeout(nextMessage,1000);
+149
+}else{
+150
+setTimeout(()=>{
+151
+document.getElementById("loading").style.display="none";
+152
+document.getElementById("main").style.display="block";
+153
+},1000);
+154
+}
+155
+}
+156
+ 
+157
+nextMessage();
+158
+ 
+159
+for(let i=0;i<100;i++){
+160
+let c=document.createElement("div");
+161
+c.className="confetti";
+162
+c.style.left=Math.random()*100+"vw";
+163
+c.style.background=
+164
+["red","yellow","blue","lime","orange","white"]
+165
+[Math.floor(Math.random()*6)];
+166
+c.style.animationDuration=(3+Math.random()*4)+"s";
+167
+document.body.appendChild(c);
+168
+}
+169
+ 
+170
+const lunchDate=new Date("2026-09-25T12:00:00");
+171
+ 
+172
+setInterval(()=>{
+173
+const now=new Date();
+174
+const diff=lunchDate-now;
+175
+ 
+176
+const days=Math.floor(diff/(1000*60*60*24));
+177
+const hours=Math.floor(diff/(1000*60*60)%24);
+178
+ 
+179
+document.getElementById("countdown").innerHTML=
+180
+"⏳ Mission Begins In: "+days+" days "+hours+" hours";
+181
+},1000);
+182
+ 
+183
+</script>
+184
+ 
+185
+</body>
+186
+</html>
