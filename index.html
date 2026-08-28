@@ -3,13 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>🍕 Classified Pizza Mission</title>
 
 <style>
 
 body{
     margin:0;
-    font-family:Segoe UI, sans-serif;
+    font-family:"Segoe UI",sans-serif;
     background:linear-gradient(135deg,#ff7b32,#ff9e4d);
     color:white;
     text-align:center;
@@ -38,9 +39,19 @@ body{
 .delay4{animation-delay:.60s;}
 
 @keyframes cancan{
-    0%{transform:translateY(0) rotate(-20deg);}
-    50%{transform:translateY(-40px) rotate(0deg);}
-    100%{transform:translateY(0) rotate(20deg);}
+
+    0%{
+        transform:translateY(0px) rotate(-20deg);
+    }
+
+    50%{
+        transform:translateY(-40px) rotate(0deg);
+    }
+
+    100%{
+        transform:translateY(0px) rotate(20deg);
+    }
+
 }
 
 .alert-banner{
@@ -50,14 +61,8 @@ body{
     border-radius:12px;
     font-weight:bold;
     max-width:900px;
-    margin:0 auto 20px auto;
+    margin:0 auto 25px auto;
     animation:pulse 1s infinite;
-}
-
-@keyframes pulse{
-    0%{opacity:1;}
-    50%{opacity:.4;}
-    100%{opacity:1;}
 }
 
 .card{
@@ -68,8 +73,49 @@ body{
     margin:auto;
 }
 
-h1{
-    font-size:48px;
+.title-block{
+    text-align:center;
+}
+
+.classified{
+    color:#ff0000;
+    font-size:70px;
+    margin-bottom:5px;
+    margin-top:0;
+    letter-spacing:6px;
+    animation:flashText .8s infinite;
+}
+
+.mission{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:20px;
+    font-size:60px;
+    margin-top:0;
+    margin-bottom:25px;
+}
+
+.light{
+    animation:flashLight .5s infinite;
+}
+
+@keyframes flashText{
+    0%{opacity:1;}
+    50%{opacity:.2;}
+    100%{opacity:1;}
+}
+
+@keyframes flashLight{
+    0%{opacity:1;}
+    50%{opacity:.1;}
+    100%{opacity:1;}
+}
+
+@keyframes pulse{
+    0%{opacity:1;}
+    50%{opacity:.4;}
+    100%{opacity:1;}
 }
 
 .button{
@@ -85,8 +131,8 @@ h1{
 }
 
 .status{
-    animation:pulse 1s infinite;
     font-weight:bold;
+    animation:pulse 1s infinite;
 }
 
 </style>
@@ -99,64 +145,4 @@ h1{
 <div class="pizza-line">
     <span class="pizza">🍕</span>
     <span class="pizza delay1">🍕</span>
-    <span class="pizza delay2">🍕</span>
-    <span class="pizza delay3">🍕</span>
-    <span class="pizza delay4">🍕</span>
-</div>
-
-<div class="alert-banner">
-🚨 EXTRA CHEESE DETECTED • OPERATION PIZZA ACTIVE • AGENTS REQUIRED 🚨
-</div>
-
-<div class="card">
-
-<h1>🚨 CLASSIFIED PIZZA MISSION 🚨</h1>
-
-<h2>🔐 Agent Successfully Verified</h2>
-
-<p>
-✅ Hunger Level: Critical<br>
-✅ Pizza Clearance: Approved<br>
-✅ Good Times: Authorized
-</p>
-
-<p>
-📡 Incoming Transmission from Pizza HQ...
-</p>
-
-<p>
-You have been selected for an elite lunch operation.
-</p>
-
-<p>
-<strong>MISSION DETAILS</strong><br>
-📅 Friday 11 September<br>
-🕛 12:00 PM<br>
-📍 Level 10 Conference Room
-</p>
-
-<p class="status">
-🚨 MISSION STATUS: ACTIVE 🚨
-</p>
-
-<p>
-Attendance is strongly encouraged.<br>
-Failure to respond may result in severe FOMO.
-</p>
-
-<h3>
-🍕 The Pizza Council Awaits Your Decision 🍕
-</h3>
-
-<a class="button"
-href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=9yilvan8L008mL1-kNQJBt9mhMRfOmpAu-xe03NYV_VUNE1HNTY3TDdNMjdJWE9NT04xVTRPV0QyNy4u"
-target="_blank">
-🍕 ACCEPT THE MISSION
-</a>
-
-</div>
-
-</div>
-
-</body>
-</html>
+    <span class="pizza delay2">🍕
