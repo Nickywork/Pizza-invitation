@@ -39,6 +39,7 @@ body{
 .delay4{animation-delay:.60s;}
 
 @keyframes cancan{
+
     0%{
         transform:translateY(0px) rotate(-20deg);
     }
@@ -50,6 +51,7 @@ body{
     100%{
         transform:translateY(0px) rotate(20deg);
     }
+
 }
 
 .alert-banner{
@@ -64,7 +66,7 @@ body{
 }
 
 .card{
-    background:rgba(255,255,255,.15);
+    background:rgba(255,255,255,.25);
     padding:30px;
     border-radius:25px;
     max-width:750px;
@@ -83,6 +85,10 @@ body{
     margin-top:0;
     letter-spacing:8px;
     animation:flashText .8s infinite;
+    text-shadow:
+        0 0 10px #ff0000,
+        0 0 20px #ff0000,
+        0 0 30px #ff0000;
 }
 
 .mission{
@@ -154,6 +160,12 @@ body{
     margin-top:30px;
 }
 
+.footer-note{
+    margin-top:35px;
+    font-size:12px;
+    opacity:.8;
+}
+
 </style>
 </head>
 
@@ -198,7 +210,7 @@ PIZZA MISSION
 </p>
 
 <p>
-📡 Incoming Transmission from Pizza HQ...
+📡 SECURE TRANSMISSION RECEIVED FROM PIZZA HQ...
 </p>
 
 <p>
@@ -261,9 +273,14 @@ target="_blank">
 🛥️ SLOW BUT STYLISH
 </a>
 
+<p class="footer-note">
+Classified by authority of the Pizza Council • Clearance Level: Double Pepperoni
+</p>
+
 </div>
 
 </div>
 
 </body>
 </html>
+``
