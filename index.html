@@ -39,7 +39,6 @@ body{
 .delay4{animation-delay:.60s;}
 
 @keyframes cancan{
-
     0%{
         transform:translateY(0px) rotate(-20deg);
     }
@@ -51,7 +50,6 @@ body{
     100%{
         transform:translateY(0px) rotate(20deg);
     }
-
 }
 
 .alert-banner{
@@ -69,7 +67,7 @@ body{
     background:rgba(255,255,255,.15);
     padding:30px;
     border-radius:25px;
-    max-width:700px;
+    max-width:750px;
     margin:auto;
 }
 
@@ -82,7 +80,7 @@ body{
     font-size:70px;
     margin-bottom:5px;
     margin-top:0;
-    letter-spacing:6px;
+    letter-spacing:8px;
     animation:flashText .8s infinite;
 }
 
@@ -118,21 +116,34 @@ body{
     100%{opacity:1;}
 }
 
+.status{
+    font-weight:bold;
+    animation:pulse 1s infinite;
+}
+
 .button{
     display:inline-block;
-    margin-top:20px;
-    background:white;
-    color:#ff6b35;
-    padding:18px 35px;
+    margin-top:15px;
+    padding:18px 30px;
     border-radius:40px;
     text-decoration:none;
     font-weight:bold;
     font-size:22px;
 }
 
-.status{
-    font-weight:bold;
-    animation:pulse 1s infinite;
+.rocket{
+    background:#d62828;
+    color:white;
+}
+
+.boat{
+    background:#0077b6;
+    color:white;
+    margin-left:15px;
+}
+
+.next-level{
+    margin-top:30px;
 }
 
 </style>
@@ -206,14 +217,40 @@ Attendance is strongly encouraged.<br>
 Failure to respond may result in severe FOMO.
 </p>
 
+<div class="next-level">
+
 <h3>
-🍕 The Pizza Council Awaits Your Decision 🍕
+🎮 NEXT LEVEL UNLOCKED
 </h3>
 
-<a class="button"
+<p>
+Your mission awaits.
+</p>
+
+<p>
+Your next destination has been selected.
+</p>
+
+<p>
+Q has arranged transport.
+</p>
+
+<p>
+How will you get to your destination?
+</p>
+
+</div>
+
+<a class="button rocket"
 href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=9yilvan8L008mL1-kNQJBt9mhMRfOmpAu-xe03NYV_VUNE1HNTY3TDdNMjdJWE9NT04xVTRPV0QyNy4u"
 target="_blank">
-🍕 ACCEPT THE MISSION
+🚀 FAST BUT QUESTIONABLE
+</a>
+
+<a class="button boat"
+href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=9yilvan8L008mL1-kNQJBt9mhMRfOmpAu-xe03NYV_VUNE1HNTY3TDdNMjdJWE9NT04xVTRPV0QyNy4u"
+target="_blank">
+🛥️ SLOW BUT STYLISH
 </a>
 
 </div>
