@@ -42,9 +42,11 @@ body{
     0%{
         transform:translateY(0px) rotate(-20deg);
     }
+
     50%{
         transform:translateY(-40px) rotate(0deg);
     }
+
     100%{
         transform:translateY(0px) rotate(20deg);
     }
@@ -120,9 +122,16 @@ body{
     animation:pulse 1s infinite;
 }
 
+.transport-buttons{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+    margin-top:20px;
+}
+
 .button{
     display:inline-block;
-    margin-top:15px;
     padding:18px 30px;
     border-radius:40px;
     text-decoration:none;
@@ -138,7 +147,6 @@ body{
 .rocket{
     background:#451B6F;
     color:white;
-    margin-right:15px;
     box-shadow:0 4px 15px rgba(69,27,111,.5);
 }
 
@@ -156,6 +164,22 @@ body{
     margin-top:35px;
     font-size:12px;
     opacity:.8;
+}
+
+@media (max-width:700px){
+
+    .classified{
+        font-size:48px;
+    }
+
+    .mission{
+        font-size:36px;
+    }
+
+    .button{
+        width:280px;
+    }
+
 }
 
 </style>
@@ -250,16 +274,24 @@ How will you get to your destination?
 
 </div>
 
+<div class="transport-buttons">
+
 <a class="button rocket"
-href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=9yilvan8L0O8mL1-kNQJBt9mhMRfOmpAu-xeO3NYV_VUNE1HNTY3TDdNMjdJWE9NT04xVTRPV0QyNy4u
+href="https://forms.cloud.microsoft/r/JxsL9ZGQm1"
+target="_blank">
+🚀 FAST BUT QUESTIONABLE
+</a>
+
 <a class="button boat"
-href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=9yilvan8L0O8mL1-kNQJBt9mhMRfOmpAu-xeO3NYV_VUNE1HNTY3TDdNMjdJWE9NT04xVTRPV0QyNy4u"
+href="https://forms.cloud.microsoft/r/JxsL9ZGQm1"
 target="_blank">
 🛥️ SLOW BUT STYLISH
 </a>
 
+</div>
+
 <p class="footer-note">
-Classified by authority Pepperoni
+Classified by authority of the Pizza Council • Clearance Level: Double Pepperoni
 </p>
 
 </div>
