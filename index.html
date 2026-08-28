@@ -53,8 +53,8 @@ body{
 }
 
 .alert-banner{
-    background:white;
-    color:#ff6b35;
+    background:#FFD60A;
+    color:#000;
     padding:12px;
     border-radius:12px;
     font-weight:bold;
@@ -69,6 +69,7 @@ body{
     border-radius:25px;
     max-width:750px;
     margin:auto;
+    backdrop-filter:blur(8px);
 }
 
 .title-block{
@@ -129,19 +130,24 @@ body{
     text-decoration:none;
     font-weight:bold;
     font-size:22px;
+    transition:.2s;
+}
+
+.button:hover{
+    transform:translateY(-3px);
 }
 
 .rocket{
-    background:#ffffff;
-    color:#000000;
+    background:#451B6F;
+    color:white;
     margin-right:15px;
-    border:3px solid #d62828;
+    box-shadow:0 4px 15px rgba(69,27,111,.5);
 }
 
 .boat{
-    background:#ffffff;
-    color:#000000;
-    border:3px solid #0077b6;
+    background:#01D1CC;
+    color:#083344;
+    box-shadow:0 4px 15px rgba(1,209,204,.5);
 }
 
 .next-level{
